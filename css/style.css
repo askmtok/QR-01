@@ -1,0 +1,66 @@
+/* カーソル */
+
+html {
+  overflow-y: scroll;
+  cursor: url("../images/cursor.png"), auto !important;
+  cursor: -webkit-image-set(url("../images/cursor.png") 1x, url("../images/cursor_2x.png") 2x), auto !important;
+}
+
+a {
+  cursor: url("../images/cursor_on.png"), auto !important;
+  cursor: -webkit-image-set(url("../images/cursor_on.png") 1x, url("../images/cursor_on_2x.png") 2x), auto !important;
+}
+
+/* 共通 */
+
+body {
+  width: 100%;
+  padding: 50px;
+}
+
+h1 {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 10vw;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pc {
+  display: block !important;
+}
+.sp {
+  display: none !important;
+}
+
+.qr {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    padding: 15px;
+  }
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 72%;
+  letter-spacing: -5px;
+  font-family: "ＭＳ ゴシック", "Osaka－等幅", monospace;
+}
+
+/* safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  _::-webkit-full-page-media,
+  _:future,
+  :root p {
+    line-height: 62%;
+    letter-spacing: -1px;
+  }
+}
