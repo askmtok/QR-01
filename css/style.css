@@ -11,6 +11,19 @@ a {
   cursor: -webkit-image-set(url("../images/cursor_on.png") 1x, url("../images/cursor_on_2x.png") 2x), auto !important;
 }
 
+/* 文字反転 */
+
+::selection {
+  background: #fa00ff;
+  color: #05ff00;
+}
+
+::-moz-selection {
+  background: #fa00ff;
+  color: #05ff00;
+}
+
+
 /* 共通 */
 
 body {
@@ -22,7 +35,7 @@ h1 {
   font-family: "DotGothic16", sans-serif;
   font-size: 10vw;
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.9;
 }
 
 .pc {
@@ -32,8 +45,16 @@ h1 {
   display: none !important;
 }
 
+.winsize {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 2vw;
+  font-weight: 900;
+  line-height: 1;
+  margin-top: 40px;
+}
+
 .qr {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -46,6 +67,9 @@ h1 {
   .sp {
     display: block !important;
   }
+  .winsize {
+    font-size: 2vh;
+  }
 }
 
 p {
@@ -53,6 +77,33 @@ p {
   line-height: 72%;
   letter-spacing: -5px;
   font-family: "ＭＳ ゴシック", "Osaka－等幅", monospace;
+}
+
+/* animation */
+
+.blinking {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  animation: blinking 2s linear infinite alternate;
+}
+
+@keyframes blinking {
+  0%,33%,66%,100%{
+    opacity: 0;
+  }
+  16%{
+    opacity: 1;
+    background:#fa00ff;
+  }
+  49%{
+    opacity: 1;
+    background: #05ff00;
+  }
+  83%{
+    opacity: 1;
+    background:#f6ff00;
 }
 
 /* safari */
