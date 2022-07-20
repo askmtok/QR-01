@@ -1,111 +1,116 @@
 /* カーソル */
 
 html {
-  overflow-y: scroll;
-  cursor: url("../images/cursor.png"), auto !important;
-  cursor: -webkit-image-set(url("../images/cursor.png") 1x, url("../images/cursor_2x.png") 2x), auto !important;
+    overflow-y: scroll;
+    cursor: url("../images/cursor.png"), auto !important;
+    cursor: -webkit-image-set(url("../images/cursor.png") 1x, url("../images/cursor_2x.png") 2x), auto !important;
 }
 
 a {
-  cursor: url("../images/cursor_on.png"), auto !important;
-  cursor: -webkit-image-set(url("../images/cursor_on.png") 1x, url("../images/cursor_on_2x.png") 2x), auto !important;
+    cursor: url("../images/cursor_on.png"), auto !important;
+    cursor: -webkit-image-set(url("../images/cursor_on.png") 1x, url("../images/cursor_on_2x.png") 2x), auto !important;
 }
 
 /* 文字反転 */
 
 ::selection {
-  background: #fa00ff;
-  color: #05ff00;
+    background: #fa00ff;
+    color: #05ff00;
 }
 
 ::-moz-selection {
-  background: #fa00ff;
-  color: #05ff00;
+    background: #fa00ff;
+    color: #05ff00;
 }
 
 /* 共通 */
 
 body {
-  width: 100%;
-  padding: 50px;
+    width: 100%;
+    padding: 50px;
 }
 
 h1 {
-  font-family: "DotGothic16", sans-serif;
-  font-size: 10vw;
-  font-weight: 900;
-  line-height: 0.9;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 10vw;
+    font-weight: 900;
+    line-height: 0.9;
 }
 
 .pc {
-  display: block !important;
+    display: block !important;
 }
 .sp {
-  display: none !important;
+    display: none !important;
 }
 
 .winsize {
-  font-family: "DotGothic16", sans-serif;
-  font-size: 2vw;
-  font-weight: 900;
-  line-height: 1;
-  margin-top: 40px;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 2vw;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 40px;
 }
 
 .qr {
-  margin-top: 40px;
+    margin-top: 40px;
+}
+
+.test {
+    color: blue;
+    font-size: 10rem;
 }
 
 @media only screen and (max-width: 750px) {
-  body {
-    padding: 15px;
-  }
-  .pc {
-    display: none !important;
-  }
-  .sp {
-    display: block !important;
-  }
-  .winsize {
-    font-size: 2vh;
-  }
+    body {
+        padding: 15px;
+    }
+    .pc {
+        display: none !important;
+    }
+    .sp {
+        display: block !important;
+    }
+    .winsize {
+        font-size: 2vh;
+    }
 }
 
 p {
-  font-size: 16px;
-  line-height: 72%;
-  letter-spacing: -5px;
-  font-family: "Liberation Serif", "Noto Sans CJK JP", /* Linux/Android/ChromeOS */ "TakaoGothic", "VL Gothic", /* Debian/Ubuntu */ "Yu Gothic", "MS Gothic", /* Windows */ "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Osaka-Mono", /* Mac/iOS */ "Noto Sans JP", Monospace;
+    font-size: 16px;
+    line-height: 72%;
+    letter-spacing: -5px;
+    font-family: "Liberation Serif", "Noto Sans CJK JP", /* Linux/Android/ChromeOS */ "TakaoGothic", "VL Gothic", /* Debian/Ubuntu */ "Yu Gothic", "MS Gothic", /* Windows */ "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Osaka-Mono", /* Mac/iOS */ "Noto Sans JP", Monospace;
 }
 
 /* animation */
 
 .blinking {
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  animation: blinking 2s linear infinite alternate;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    animation: blinking 2s linear infinite alternate;
 }
 
 @keyframes blinking {
-  0%,
-  33%,
-  66%,
-  100% {
-    opacity: 0;
-  }
-  16% {
-    opacity: 1;
-    background: #fa00ff;
-  }
-  49% {
-    opacity: 1;
-    background: #05ff00;
-  }
-  83% {
-    opacity: 1;
-    background: #f6ff00;
-  }
+    0%,
+    33%,
+    66%,
+    100% {
+        opacity: 0;
+    }
+    16% {
+        opacity: 1;
+        background: #fa00ff;
+    }
+    49% {
+        opacity: 1;
+        background: #05ff00;
+    }
+    83% {
+        opacity: 1;
+        background: #f6ff00;
+    }
 }
